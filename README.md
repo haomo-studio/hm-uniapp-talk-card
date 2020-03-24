@@ -14,7 +14,7 @@
 
 ## 技术支持
 
-* [uni-app插件市场](https://ext.dcloud.net.cn/plugin?id=1380)
+* [uni-app插件市场](https://ext.dcloud.net.cn/plugin?id=1482)
 
 * [npm包](https://www.npmjs.com/package/hm-uniapp-talk-card)
 
@@ -28,7 +28,7 @@
 
 ## 概述
 
-毫末uni-app毫末说说卡片组件。支持H5/小程序(微信、支付宝、头条、百度、QQ)/App；组件可自适应各种屏幕大小的手机。
+毫末uni-app毫末动态卡片组件。支持H5/小程序(微信、支付宝、头条、百度、QQ)/App；组件可自适应各种屏幕大小的手机。
 
 ## 使用
 
@@ -37,7 +37,7 @@
 在script中引用：
 
 ```javascript
-import componentUpperCamelCase from '@/components/hm-talk-card/index.vue'
+import HmTalkCard from '@/components/hm-talk-card/index.vue'
 export default {
     components: { HmTalkCard }
 }
@@ -48,27 +48,43 @@ export default {
 ```html
 <template>
   <div class="test-component">
-    <hm-talk-card></hm-talk-card>
+    <hm-talk-card :options="options"></hm-talk-card>
   </div>
 </template>
 <script>
 import HmTalkCard from '@/components/hm-components/hm-talk-card/index.vue'
 
 export default {
-  components: { HmTalkCard },
+  components: {
+    HmTalkCard
+    },
   data() {
     return {
+      options: {
+          avator:
+            '/static/hm-talk-card/images/img_25252_0_2.png',
+          name: '黄三环',
+          stateimg:
+            '/static/hm-talk-card/images/img_25252_0_3.png',
+          text: '1582年，“咖啡”一词通过荷兰语koffie进入英语…',
+          iconfriendsHelp:
+            '/static/hm-talk-card/images/img_25252_0_0.png',
+          num: '234',
+          like: '喜欢',
+          iconTest:
+            '/static/hm-talk-card/images/img_25252_0_1.png',
+          commentNum: '67',
+          comments: '条评论'
+        }
     };
   },
   methods: {
-    onClick: function(e) {
-      console.log('onClick');
-    }
   }
 };
 </script>
 <style>
 </style>
+
 ```
 
 ## 属性说明
@@ -81,7 +97,14 @@ options对象各个属性说明如下：
 
 | 属性名        | 类型     | 默认值 | 说明                                                                       |
 |-----------   |---------|--------|----------------------------------------------------------------------------|
-| title        | String  | -      | 标题文字                                                                   |
+| avator        | String  | -      | 头像图片                                                                   |
+| name        | String  | -      | 姓名                                                                   |
+| stateimg        | String  | -      | 图片                                                                   |
+| text        | String  | -      | 内容文字                                                                   |
+| iconfriendsHelp        | String  | -      | 图片                                                             |
+| num        | String  | -      | 喜欢数量                                                             |
+| iconTest        | String  | -      | 评论图片                                                             |
+| commentNum        | String  | -      | 评论数量                                                             |
 
 ## 事件说明
 
@@ -91,6 +114,6 @@ options对象各个属性说明如下：
 
 ## 更新日志
 
-### 0.0.1(2020-03-07)
+### 0.0.1(2020-03-24)
 
 * 完成第一个版本

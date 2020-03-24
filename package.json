@@ -1,5 +1,5 @@
 {
-  "name": "hm-talk-card",
+  "name": "hm-uniapp-talk-card",
   "version": "0.0.1",
   "description": "毫末uni-app毫末说说卡片组件。支持H5/小程序(微信、支付宝、头条、百度、QQ)/App；组件可自适应各种屏幕大小的手机。",
   "main": "index.js",
@@ -13,7 +13,7 @@
     "小程序",
     "Android",
     "iOS",
-    "毫末说说卡片",
+    "毫末动态卡片",
     "组件"
   ],
   "author": "毫末科技",
